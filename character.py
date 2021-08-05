@@ -9,3 +9,4 @@ class Character:
 
   def attackMonster(self, m : monster.Monster):
     print("%s attacking %s ..." %(self.name, m.name))
+    m.damage(5)
