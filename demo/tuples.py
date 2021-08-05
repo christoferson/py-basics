@@ -1,7 +1,7 @@
 
 def demo_tuples():
     print("*************** Demo Tuples ***************")
-    mytuple = ("apple", "banana", "cherry", "apple", "cherry")
+    mytuple = ("apple", "banana", "cherry", "apple", "orange")
     print(mytuple)
     # Access
     print(mytuple[1:3])
@@ -15,3 +15,12 @@ def demo_tuples():
     # For Loop
     for mytuple_element in mytuple:
         print(mytuple_element)
+    # Join
+    mtuple1 = (1, 2, 3)
+    mtuple2 = (4, 5, 6)
+    print(mtuple1 + mtuple2)
+    print(mtuple1 * 2)   
+    # Tuple.count
+    print("Count 'apple' in {} : {} instances".format(mytuple, mytuple.count("apple")))
+    # Tuple.index
+    print("Index of 'orange' in {} : {}".format(mytuple, mytuple.index("orange")) )
