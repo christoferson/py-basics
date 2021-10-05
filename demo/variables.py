@@ -10,6 +10,8 @@ def demo_variables():
 
     demo_type()
 
+    demo_string_quotes()
+
 def demo_declaration():
     
     # 1.Python has no command for declaring a variable.
@@ -40,3 +42,12 @@ def demo_type():
     y = "John"
     print(type(x))
     print(type(y)) 
+
+def demo_string_quotes(): 
+
+    # String variables can be declared either by using single or double quotes:
+
+    x = "John"
+    y = 'John'
+
+    print(x, y, type(x), type(y), sep=" | ")
