@@ -23,5 +23,10 @@ print(dogs)
 
 # Variable Type
 
-print(type(cats))
-print(type(dogs))
+print(type(2))
+print(type(3.2))
+print(type(["Sammy", "Franky"]))
+
+
+
+
