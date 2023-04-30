@@ -40,3 +40,17 @@ print(strx.upper())
 print(strx.lower())
 print(strx.split())
 print(strx.split("|"))
+
+# Printing Formatting and Printing / Interpolation
+stry = "foo {} bar {} zoom {}"
+print(stry.format("A", "B", "C"))
+print("foo {0} bar {1} zoom {2}".format("A", "B", "C")) # default
+print("foo {2} bar {1} zoom {0}".format("A", "B", "C")) # index
+print("foo {b} bar {c} zoom {a}".format(a="A", b="B", c="C")) # keywords
+
+# Formatting Floating Numbers
+mfloat = 100/777
+print("100/777={f:1.5f}".format(f=mfloat))
+
+# f strings
+print(f"100/777={mfloat:1.5f}")
