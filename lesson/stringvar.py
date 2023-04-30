@@ -20,3 +20,23 @@ print(string1[2:5]) # c till e
 print(string1[::]) # grab everything
 print(string1[::2]) # grab everything in steps of 2
 print(string1[::-1]) # reverse the string
+
+# Immutability
+immutablestr = "Foo"
+#immutablestr[0] = "B" # TypeError: 'str' object does not support item assignment
+
+# String concatenation
+print("B" + immutablestr[1::])
+
+# String multiplication
+print("z" * 10)
+
+# Plus Operator and Operand Types
+print(3 + 5) # prints 8
+print('3' + '5') # prints 35
+
+strx = "foo Bar|zap Kap"
+print(strx.upper())
+print(strx.lower())
+print(strx.split())
+print(strx.split("|"))
