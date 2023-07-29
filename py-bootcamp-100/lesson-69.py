@@ -8,15 +8,37 @@ wrk_list = []
 for idx in range(0, len(chosen_word)):
    wrk_list.append("_")
 
-guess = input("Enter a letter: ").lower()[0]
+end = True
 
-guess_idx = chosen_word.find(guess)
-if guess_idx > -1:
-    wrk_list[guess_idx] = guess
-    print(f"Found {guess} at {guess_idx}")
-else:
-    print("Not Found")
+for cnt in range (0, 10):
 
-print(chosen_word, " ", guess, "\n")
+    guess = input("Enter a letter: ").lower()[0]
 
-print(wrk_list)
+    """
+    guess_idx = chosen_word.find(guess)
+    if guess_idx > -1:
+        wrk_list[guess_idx] = guess
+        print(f"Found {guess} at {guess_idx}")
+    else:
+        print("Not Found")
+    """
+
+    for i in range(0, len(chosen_word)):
+        if chosen_word[i] == guess:
+            wrk_list[i] = guess
+
+
+    print(chosen_word, " ", guess, "\n")
+
+    print(wrk_list)
+
+
+    for wrk in wrk_list:
+        if wrk == "_":
+            end = False
+        else:
+            end = True
+    print("End: " , end)
+
+    if end == True:
+        break
