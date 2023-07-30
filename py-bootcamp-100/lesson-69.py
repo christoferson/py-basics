@@ -1,6 +1,6 @@
 import random
 
-word_list = ["ardvark", "baboon", "camel"]
+word_list = ["ardvark", "baboon", "camel", "elephant", "kangaroo"]
 
 chosen_word = random.choice(word_list)
 
@@ -9,10 +9,13 @@ for idx in range(0, len(chosen_word)):
    wrk_list.append("_")
 
 end = True
+guess_count = 0
+guess_max = len(chosen_word) + 5
 
-for cnt in range (0, 10):
+for cnt in range (0, guess_max):
 
-    guess = input("Enter a letter: ").lower()[0]
+    guess = input(f"Enter a letter {guess_count}/{guess_max}: ").lower()[0]
+    guess_count += 1
 
     """
     guess_idx = chosen_word.find(guess)
@@ -41,4 +44,8 @@ for cnt in range (0, 10):
     print("End: " , end)
 
     if end == True:
+        print(f"Congratulations! Answer: {chosen_word} Guess: {guess_count}")
         break
+    else:
+        if guess_count == guess_max:
+            print(f"Out of luck! Answer is {chosen_word}.")
