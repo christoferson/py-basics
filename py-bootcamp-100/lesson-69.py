@@ -4,6 +4,7 @@ word_list = ["ardvark", "baboon", "camel", "elephant", "kangaroo"]
 
 chosen_word = random.choice(word_list)
 
+# Initialize work array with underscore
 wrk_list = []
 for idx in range(0, len(chosen_word)):
    wrk_list.append("_")
@@ -36,6 +37,7 @@ for cnt in range (0, guess_max):
     print(wrk_list)
 
 
+    # Check if work array still contains "_"
     for wrk in wrk_list:
         if wrk == "_":
             end = False
@@ -49,3 +51,5 @@ for cnt in range (0, guess_max):
     else:
         if guess_count == guess_max:
             print(f"Out of luck! Answer is {chosen_word}.")
+        else:
+            print(f"{guess_max - guess_count} guesses left.")
