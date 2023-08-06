@@ -1,8 +1,11 @@
 import random
 
+from lessonlib import cmn_word_list
+
 word_list = ["ardvark", "baboon", "camel", "elephant", "kangaroo"]
 
 chosen_word = random.choice(word_list)
+chosen_word = random.choice(cmn_word_list)
 
 # Initialize work array with underscore
 wrk_list = []
