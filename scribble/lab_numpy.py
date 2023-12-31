@@ -66,3 +66,76 @@ print(arr[::2])
 
 arr = np.array([[1, 2, 3, 4, 5], [6, 7, 8, 9, 10]])
 print(arr[1, 1:4]) 
+
+arr = np.array([[1, 2, 3, 4, 5], [6, 7, 8, 9, 10]])
+print(arr[0:2, 2]) 
+
+arr = np.array([[1, 2, 3, 4, 5], [6, 7, 8, 9, 10]])
+print(arr[0:2, 1:4]) 
+
+# NumPy Data Types
+
+"""
+i - integer
+b - boolean
+u - unsigned integer
+f - float
+c - complex float
+m - timedelta
+M - datetime
+O - object
+S - string
+U - unicode string
+V - fixed chunk of memory for other type ( void )
+"""
+
+arr = np.array([1, 2, 3, 4])
+print(arr.dtype) 
+
+arr = np.array(['apple', 'banana', 'cherry'])
+print(arr.dtype) 
+
+arr = np.array([3.2, 2, 3, 4])
+print(arr.dtype) 
+
+arr = np.array([1, 2, 3, 4], dtype='S')
+print(arr)
+print(arr.dtype) 
+
+arr = np.array([1, 2, 3, 4], dtype='i4')
+print(arr)
+print(arr.dtype) 
+
+
+# Convert Data Type
+
+
+arr = np.array([1.1, 2.1, 3.1])
+newarr = arr.astype('i')
+print(newarr)
+print(newarr.dtype) 
+
+
+arr = np.array([1.1, 2.1, 3.1])
+newarr = arr.astype(int)
+print(newarr)
+print(newarr.dtype) 
+
+
+arr = np.array([1, 0, 3])
+newarr = arr.astype(bool)
+print(newarr)
+print(newarr.dtype) 
+
+
+# NumPy Array Copy vs View
+
+arr = np.array([1, 2, 3, 4, 5])
+copy = arr.copy()
+view = arr.view()
+arr[0] = 42
+view[0] = 8
+copy[0] = 27
+print(f"arr:  {arr}")
+print(f"copy: {copy}") 
+print(f"view: {view}") 
