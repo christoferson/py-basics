@@ -139,3 +139,18 @@ copy[0] = 27
 print(f"arr:  {arr}")
 print(f"copy: {copy}") 
 print(f"view: {view}") 
+
+# NumPy Array Shape
+arr = np.array([[1, 2, 3, 4], [5, 6, 7, 8]])
+print(arr.shape) 
+
+arr = np.array([1, 2, 3, 4], ndmin=5)
+print(arr)
+print('shape of array :', arr.shape) 
+
+# NumPy Array Reshaping
+
+# Reshape From 1-D to 2-D
+arr = np.array([1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15])
+newarr = arr.reshape(3, 5)
+print(newarr) 
