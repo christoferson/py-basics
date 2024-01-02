@@ -154,3 +154,14 @@ print('shape of array :', arr.shape)
 arr = np.array([1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15])
 newarr = arr.reshape(3, 5)
 print(newarr) 
+
+# Reshape From 1-D to 3-D
+arr = np.array([1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18])
+newarr = arr.reshape(2, 3, 3)
+print(newarr) 
+print(newarr.base) 
+
+# Unknown Dimension
+arr = np.array([1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12])
+newarr = arr.reshape(2, 3, -1)
+print(newarr) 
