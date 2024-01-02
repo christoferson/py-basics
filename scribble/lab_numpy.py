@@ -162,6 +162,19 @@ print(newarr)
 print(newarr.base) 
 
 # Unknown Dimension
-arr = np.array([1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12])
+arr = np.array([1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18])
 newarr = arr.reshape(2, 3, -1)
 print(newarr) 
+
+
+# Flattening
+
+arr = np.array([[1, 2, 3], [4, 5, 6], [7,8,9]])
+newarr = arr.reshape(-1)
+print(newarr) 
+
+# Iterating Arrays
+
+arr = np.array([1, 2, 3, 4, 5])
+for x in arr:
+  print(x) 
