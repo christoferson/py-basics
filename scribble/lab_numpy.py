@@ -195,3 +195,29 @@ for x in arr:
 arr = np.array([[[1, 2, 3], [4, 5, 6]], [["a", "b", "c"], [10, 11, 12]]])
 for x in arr:
   print(x) 
+
+# nditer
+
+arr = np.array([[[1, 2], [3, 4]], [[5, 6], [7, 8]]])
+
+for x in np.nditer(arr):
+  print(x) 
+
+# ndenumerate
+
+arr = np.array([[1, 2, 3, 4], [5, 6, 7, 8]])
+
+for idx, x in np.ndenumerate(arr):
+  print(idx, x) 
+
+# Joining NumPy Arrays
+
+arr1 = np.array([1, 2, 3])
+arr2 = np.array([4, 5, 6])
+arr = np.concatenate((arr1, arr2))
+print(arr) 
+
+arr1 = np.array([[1, 2], [3, 4]])
+arr2 = np.array([[5, 6], [7, 8]])
+arr = np.concatenate((arr1, arr2), axis=1)
+print(arr) 
