@@ -111,21 +111,21 @@ print(arr.dtype)
 
 
 arr = np.array([1.1, 2.1, 3.1])
-newarr = arr.astype('i')
-print(newarr)
-print(newarr.dtype) 
+narr = arr.astype('i')
+print(narr)
+print(narr.dtype) 
 
 
 arr = np.array([1.1, 2.1, 3.1])
-newarr = arr.astype(int)
-print(newarr)
-print(newarr.dtype) 
+narr = arr.astype(int)
+print(narr)
+print(narr.dtype) 
 
 
 arr = np.array([1, 0, 3])
-newarr = arr.astype(bool)
-print(newarr)
-print(newarr.dtype) 
+narr = arr.astype(bool)
+print(narr)
+print(narr.dtype) 
 
 
 # NumPy Array Copy vs View
@@ -152,26 +152,26 @@ print('shape of array :', arr.shape)
 
 # Reshape From 1-D to 2-D
 arr = np.array([1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15])
-newarr = arr.reshape(3, 5)
-print(newarr) 
+narr = arr.reshape(3, 5)
+print(narr) 
 
 # Reshape From 1-D to 3-D
 arr = np.array([1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18])
-newarr = arr.reshape(2, 3, 3)
-print(newarr) 
-print(newarr.base) 
+narr = arr.reshape(2, 3, 3)
+print(narr) 
+print(narr.base) 
 
 # Unknown Dimension
 arr = np.array([1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18])
-newarr = arr.reshape(2, 3, -1)
-print(newarr) 
+narr = arr.reshape(2, 3, -1)
+print(narr) 
 
 
 # Flattening
 
 arr = np.array([[1, 2, 3], [4, 5, 6], [7,8,9]])
-newarr = arr.reshape(-1)
-print(newarr) 
+narr = arr.reshape(-1)
+print(narr) 
 
 # Iterating Arrays
 
@@ -242,3 +242,25 @@ arr1 = np.array([1, 2, 3])
 arr2 = np.array([4, 5, 6])
 arr = np.dstack((arr1, arr2))
 print(arr) 
+
+# Splitting Arrays
+arr = np.array([1, 2, 3, 4, 5, 6])
+narr = np.array_split(arr, 3)
+print(narr) 
+
+arr = np.array([1, 2, 3, 4, 5, 6])
+narr = np.array_split(arr, 4)
+print(narr) 
+
+arr = np.array([1, 2, 3, 4, 5, 6, 7, 8])
+narr = np.array_split(arr, 3)
+print(narr[0])
+print(narr[1])
+print(narr[2]) 
+
+
+arr = np.array([[1, 2], [3, 4], [5, 6], [7, 8], [9, 10], [11, 12]])
+narr = np.array_split(arr, 3)
+print(narr[0]) 
+print(narr[1]) 
+print(narr[2]) 
