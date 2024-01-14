@@ -264,3 +264,18 @@ narr = np.array_split(arr, 3)
 print(narr[0]) 
 print(narr[1]) 
 print(narr[2]) 
+
+# Searching Arrays
+
+arr = np.array([1, 2, 3, 4, 5, 4, 4, 5, 7, 4])
+indexes = np.where(arr == 4)
+print(indexes) 
+
+
+arr = np.array([1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 2])
+indexes = np.where(arr % 2 == 0)
+print(indexes) 
+
+arr = np.array([1, 2, 3, 4, 5, 6, 7, 8])
+indexes = np.where(arr%2 == 1)
+print(indexes) 
