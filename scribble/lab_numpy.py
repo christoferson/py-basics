@@ -279,3 +279,8 @@ print(indexes)
 arr = np.array([1, 2, 3, 4, 5, 6, 7, 8])
 indexes = np.where(arr%2 == 1)
 print(indexes) 
+
+
+arr = np.array([6, 7, 8, 9])
+x = np.searchsorted(arr, 7)
+print(x) 
